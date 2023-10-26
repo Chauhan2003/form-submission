@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Form File</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /* Apply some basic styles to the form */
+        * {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        form {
+            width: 300px;
+            border-radius: 10px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            border: 1px solid #ccc;
+            background-color: #f5f5f5;
+            position: relative;
+            top: 4rem;
+        }
+
+        /* Style the labels for the input fields */
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        /* Style the input fields */
+        input[type="text"],
+        input[type="email"],
+        input[type="number"]{
+            width: 100%;
+            padding: 5px;
+            font-size: 17px;
+            margin-bottom: 10px;
+            border: none;
+            background-color: #f5f5f5;
+            border-bottom: 1px solid black;
+            outline: none;
+        }
+
+        /* Style the submit button */
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            margin-top: 1rem;
+            position: relative;
+            left: 6rem;
+            padding: 8px 18px;
+            border: none;
+            font-size: 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        /* Style the select box */
+        select {
+            width: 100%;
+            padding: 5px;
+            font-size: 17px;
+            margin-bottom: 10px;
+            border: none;
+            background-color: #f5f5f5;
+            border-bottom: 1px solid black;
+            outline: none;
+        }
+
+        /* Style the options within the select box */
+        select option {
+            padding: 5px;
+            font-size: 17px;
+            background-color: #f5f5f5;
+            border: none;
+            border-bottom: 1px solid black;
+            outline: none;
+        }
+
+        /* Style the select box when it's focused (clicked on) */
+        select:focus {
+            border-color: #007BFF;
+            /* Change the border color when focused */
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.7);
+            /* Add a subtle box shadow */
+        }
+    </style>
+</head>
+
+<body>
+    <form action="/formdata" method="POST">
+        <label>First Name: </label>
+        <input type="text" name="first-name" />
+        <label>Last Name: </label>
+        <input type="text" name="last-name" />
+        <label>Email: </label>
+        <input type="email" name="email" />
+        <label>Phone: </label>
+        <input type="number" name="phone" />
+        <label>Country: </label>
+        <select name="country">
+            <option value="USA">USA</option>
+            <option value="India">India</option>
+            <option value="Russia">Russia</option>
+            <option value="Canada">Canada</option>
+            <option value="Pakistan">Pakistan</option>
+            <option value="UK">UK</option>
+            <option value="Other">Other</option>
+        </select>
+        <input type="submit" />
+    </form>
+</body>
+
+</html>
